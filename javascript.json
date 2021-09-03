@@ -1,0 +1,46 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"IA For Loop": {
+		"prefix": ["for", "for-const"],
+		"body": ["for (const ${2:element} of ${1:array}) {", "\t$0", "}"],
+		"description": "A for loop."
+	},
+	"IA Select Element": {
+		"prefix": ["doc", "$"],
+		"body": ["document.querySelector('${1:element}')"],
+		"description": "select an element."
+	},
+	"IA Select Element All": {
+		"prefix": ["docAll", "$all"],
+		"body": ["document.querySelectorAll('${1:element}')"],
+		"description": "select an element."
+	},
+	"IA Event Listenner": {
+		"prefix": ["on", "event"],
+		"body": ["document.querySelector('${2:element}').addEventListener('${1:event}', (e) => {","\t${3:code} ","});"],
+		"description": "Event Listenner"
+	},
+	"IA Event Resize": {
+		"prefix": ["resize"],
+		"body": ["window.addEventListener('resize', function() {","\t$0 ","}, true);"],
+		"description": "Event Resize"
+	},
+	"IA Document Ready": {
+		"prefix": ["ready"],
+		"body": ["var ready = (callback) => {","\tif (document.readyState != 'loading') callback();","\telse document.addEventListener('DOMContentLoaded', callback);","}","ready(() => {", "\t$0","});"],
+		"description": "Event Resize"
+	}
+}
