@@ -89,7 +89,7 @@
 		"description": "Add class"
 	},
 	"IA Toggle Class": {
-		"prefix": ["remove class"],
+		"prefix": ["toggle class"],
 		"body": ["${1:elem}.classList.toggle('${2:className}');"],
 		"description": "Toggle class"
 	},
