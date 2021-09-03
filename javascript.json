@@ -93,6 +93,11 @@
 		"body": ["${1:elem}.classList.toggle('${2:className}');"],
 		"description": "Toggle class"
 	},
+	"IA Map": {
+		"prefix": ["map array"],
+		"body": ["${1:elem}.map(function() {", "\t$0","}"],
+		"description": "Map array"
+	},
 }
 
 
