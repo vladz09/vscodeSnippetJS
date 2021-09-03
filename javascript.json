@@ -35,12 +35,64 @@
 	},
 	"IA Event Resize": {
 		"prefix": ["resize"],
-		"body": ["window.addEventListener('resize', function() {","\t$0 ","}, true);"],
+		"body": ["window.addEventListener('resize', function(e) {","\t$0 ","}, true);"],
 		"description": "Event Resize"
+	},
+	"IA Event Scroll": {
+		"prefix": ["scroll"],
+		"body": ["window.onscroll = function(e) {","\t$0 ","};"],
+		"description": "Event Scroll"
 	},
 	"IA Document Ready": {
 		"prefix": ["ready"],
 		"body": ["var ready = (callback) => {","\tif (document.readyState != 'loading') callback();","\telse document.addEventListener('DOMContentLoaded', callback);","}","ready(() => {", "\t$0","});"],
-		"description": "Event Resize"
-	}
+		"description": "Document Ready"
+	},
+	"IA Append": {
+		"prefix": ["append"],
+		"body": ["var element = document.createElement('${1:elem}');","document.querySelector('${2:container}').appendChild(element);"],
+		"description": "Append"
+	},
+	"IA Next": {
+		"prefix": ["next"],
+		"body": ["${1:elem}.nextElementSibling;"],
+		"description": "Next"
+	},
+	"IA Previous": {
+		"prefix": ["previous"],
+		"body": ["${1:elem}.previousElementSibling;"],
+		"description": "Previous"
+	},
+	"IA Parent": {
+		"prefix": ["parent"],
+		"body": ["${1:elem}.parentElement;"],
+		"description": "Parent"
+	},
+	"IA CSS": {
+		"prefix": ["css"],
+		"body": ["${1:elem}.style.${2:property} = '${3:value}';"],
+		"description": "CSS"
+	},
+	"IA CSS All": {
+		"prefix": ["css all", "$css"],
+		"body": ["${1:elem}.style.cssText = '$(2:value}';"],
+		"description": "CSS All"
+	},
+	"IA Remove Class": {
+		"prefix": ["remove class"],
+		"body": ["${1:elem}.classList.remove('${2:className}');"],
+		"description": "Remove class"
+	},
+	"IA Add Class": {
+		"prefix": ["add class"],
+		"body": ["${1:elem}.classList.add('${2:className}');"],
+		"description": "Add class"
+	},
+	"IA Toggle Class": {
+		"prefix": ["remove class"],
+		"body": ["${1:elem}.classList.toggle('${2:className}');"],
+		"description": "Toggle class"
+	},
 }
+
+
