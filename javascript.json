@@ -98,6 +98,11 @@
 		"body": ["${1:elem}.map(function() {", "\t$0","}"],
 		"description": "Map array"
 	},
+	"IA Is Exist": {
+		"prefix": ["exist", "!!"],
+		"body": ["!!document.querySelector('${1:element}')"],
+		"description": "Check if elem exist (bool)"
+	},
 }
 
 
